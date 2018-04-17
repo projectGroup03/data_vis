@@ -1,0 +1,67 @@
+body {
+  line-height: normal;
+}
+* {
+  box-sizing: inherit;
+}
+#defaultCanvas0 { 
+    position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 150px; 
+}
+#navBarForDataDiv {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  height: 90px;
+  z-index: 0;
+}
+#navContain {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  width: 540px; height: 100%;
+  left: 0; right: 0; margin-left: auto; margin-right: auto;
+}
+#navForData {
+  position: absolute;
+  width: 660px;
+  top: 50px;
+  padding: 0;
+  list-style: none;
+  left: 0; right: 0; margin-left: auto; margin-right: auto;
+}
+.navLinkBox {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-block;
+}
+/* style of the axis */
+.axis { font: 14px sans-serif; }
+
+/* styles all elements */
+* { font: 14px sans-serif; }
+
+/* style of the line */
+.line {
+  fill: none;
+  stroke: gainsboro;
+  stroke-width: 2px;
+}
+
+/* style of the box on hover */
+div.interactivebox {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: gainsboro;
+  border: 0px;
+  pointer-events: none;
+}
+svg {
+    position: absolute;
+    top: 150px;
+    left: 0; right: 0; margin-left: auto; margin-right: auto;
+}
