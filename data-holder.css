@@ -41,11 +41,18 @@ body {
 /* styles all elements */
 * { font: 14px sans-serif; }
 
-/* style of the line */
-.line {
-  fill: none;
-  stroke: gainsboro;
-  stroke-width: 2px;
+.ukaxis text{
+  fill: black;
+}
+
+.londonaxis text{
+  fill: darkgray;
+}
+
+svg {
+    position: absolute;
+    top: 150px;
+    left: 0; right: 0; margin-left: auto; margin-right: auto;
 }
 
 /* style of the box on hover */
@@ -59,9 +66,20 @@ div.interactivebox {
   background: gainsboro;
   border: 0px;
   pointer-events: none;
+  z-index: 2;
 }
-svg {
-    position: absolute;
-    top: 150px;
-    left: 0; right: 0; margin-left: auto; margin-right: auto;
+
+div.interactivebox2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: gainsboro;
+  border: 0px;
+  pointer-events: none;
+  z-index: 2
 }
