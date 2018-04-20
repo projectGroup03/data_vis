@@ -52,14 +52,18 @@ var Workforce = function() {
             svg.append("path")
                 .data([data])
                 .attr("class", "line")
+                .attr("fill", "none")
                 .style("stroke", "black")
+                .style("stroke-width", "2px")
                 .attr("d", ukline);
 
           // Add the londonline path with separate styling
             svg.append("path")
                 .data([data])
                 .attr("class", "line")
+                .attr("fill", "none")
                 .style("stroke", "darkgray")
+                .style("stroke-width", "2px")
                 .attr("d", londonline);
 
           // Add the X Axis
