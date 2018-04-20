@@ -36,6 +36,18 @@ body {
   display: inline-block;
   cursor: pointer;
 }
+#graphAnalysis {
+    position: absolute;
+    width: 960px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right:auto;
+    top: 670px;
+    z-index: 3;
+    padding-bottom: 100px
+}
 /* style of the axis */
 .axis { font: 14px sans-serif; }
 

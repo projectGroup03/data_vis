@@ -9,6 +9,7 @@ var Salary = function() {
         noStroke();
         noLoop();  // Run once and stop
         
+        // Create keys for the piechart
         stroke('#000000');
         fill('#000000');
         textSize(20);
@@ -33,33 +34,38 @@ var Salary = function() {
         rect(457, 300, 30, 30);
         fill('#663300');
         rect(457, 375, 30, 30);
-
+        
+        // Use p5's getColumn method to grab the first column in the csv file
         dataLen = salaryData.getColumn(0).length;
         x = 0;
+        
+        // This outer loop of dictates which piechart being is created 
         for (n = 1; n < dataLen; n++) {  
+            
+            // Make empty arrays for the variables to be used in the piechart creation
             builderT = 0;
             arrArc = [];
             radials = [];
             sAngle = 0;
 
+            // Grab the salaries in each region of the year within the loop
             for (i = 0; i < dataLen; i++) {
                 builderT += parseInt(salaryData.getColumn(n)[i]);
                 arrArc.push(parseInt(salaryData.getColumn(n)[i]));
-                console.log();
             }
-
+            
+            // Push the converted data into the radials array ( from salary to radial proporitions )
             for (i = 0; i < dataLen; i++) {
                 radials.push((parseInt(salaryData.getColumn(n)[i])/builderT)*(2*Math.PI));
             }
-
+            
+            // Create the sectors of the pie with each iteration
             for (i = 0; i < dataLen; i++) {
                 fill(colorsAngles[i]);
                 arc(positions[x], positions[x+1], 200, 200, sAngle, sAngle+radials[i]);
                 sAngle += radials[i];
             }
-
-            console.log(radials);
-            console.log(arrArc);
+            
             x += 2;
         }
 
