@@ -34,6 +34,7 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   display: inline-block;
+  cursor: pointer;
 }
 /* style of the axis */
 .axis { font: 14px sans-serif; }
